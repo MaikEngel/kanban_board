@@ -1,0 +1,379 @@
+@font-face {
+  font-family: "pt-sans";
+  src: url("./fonts/pt-sans-v17-latin-ext_latin_cyrillic-ext_cyrillic-700.ttf");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: pt-sans;
+}
+
+.columns-container {
+  height: 95vh;
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.column {
+  border: 2px solid #f4f3fb;
+  border-top: 3px solid #f4f3fb;
+  min-width: 220px;
+  width: 282px;
+  height: 100%;
+  position: relative;
+  background-color: #f4f3fb;
+  box-shadow: 5px 5px 10px 0px rgb(125, 125, 125);
+  text-shadow: 0px 0px white;
+  transition: all 200ms;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.column::before {
+  position: absolute;
+  top: 0px;
+
+  right: 10%;
+
+  width: 50%;
+  height: 80px;
+  text-align: center;
+
+  border-radius: 50%;
+  padding-top: 40px;
+
+  z-index: 10;
+  background-color: rgb(65, 59, 255);
+  border: 2px solid orangered;
+  color: white;
+  letter-spacing: 2px;
+  transition: all 200ms;
+  transform: translate(0, -50%);
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+
+.column:hover::before {
+  top: 40px;
+  right: 0;
+
+  z-index: 5;
+  border-radius: 0%;
+  height: 2rem;
+  width: calc(100% + 2px);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 200ms; */
+  border-radius: 2px;
+  padding-bottom: 20px;
+  transform: translate(1.5px, -100%);
+}
+
+.small {
+  margin-right: 10px;
+  margin-left: auto;
+  width: calc(100% - 160px);
+}
+
+/*
+Task styles
+*/
+.tasks-cont {
+  overflow: scroll;
+  position: relative;
+  z-index: 50;
+}
+
+.task-cont {
+  margin-bottom: 5px;
+  border-bottom: 2px solid green;
+  margin-top: 5px;
+  padding-right: 1%;
+  padding-left: 2%;
+  background-color: rgba(205, 98, 15, 0.118);
+  max-height: 150px;
+  min-height: 80px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  /* height: fit-content; */
+  /* height: max-content; */
+}
+
+.task-cont:last-child {
+  border: none;
+}
+
+.task-cont>* {
+  max-width: 220px;
+  transition: all 200ms;
+}
+
+.task-cont>*:hover {
+  max-width: 220px;
+}
+
+.task-cont:hover {
+  background-color: rgba(205, 98, 15, 0.318);
+  transition: all 50ms;
+  /* flex-basis: 100%; */
+}
+
+.task-title {
+  border-bottom: 1px dotted lightseagreen;
+  width: fit-content;
+  padding-right: 10px;
+  border-bottom-right-radius: 10%;
+  min-height: 20px;
+  max-height: 60px;
+  /* overflow: hidden; */
+}
+
+.taskPicture {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  margin-left: 8px;
+}
+
+.taskContainer {
+  background-color: white;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.taskContainer div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.taskContainerDescription {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.fontColor {
+  color: #1e3190;
+}
+
+.urgencyBackgroundColorRed {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-transform: capitalize;
+  color: white;
+  background-color: red;
+  border-radius: 4px;
+}
+
+
+.urgencyBackgroundColorOrange {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-transform: capitalize;
+  color: white;
+  background-color: orange;
+  border-radius: 4px;
+}
+
+
+.urgencyBackgroundColorBlue {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-transform: capitalize;
+  color: white;
+  background-color: blue;
+  border-radius: 4px;
+
+}
+
+.urgencyFullscreenColorRed {
+  border: solid 8px red;
+}
+
+
+.urgencyFullscreenColorOrange {
+  border: solid 8px orange;
+}
+
+
+.urgencyFullscreenColorBlue {
+  border: solid 8px blue;
+}
+
+.taskHeadline {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 217px;
+}
+
+.taskCheckMark {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.taskCheckMark:hover {
+  opacity: 1;
+  filter: unset;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000085;
+  z-index: 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreenTask {
+  position: relative;
+  height: 380px;
+  width: 660px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.fullscreenTaskHeadline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fullscreenTaskDescription {
+  border-radius: 8px;
+  background-color: #f4f3fb;
+  padding: 8px;
+  height: 150px;
+  overflow: scroll;
+}
+
+.fullscreenTaskPicture {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  position: absolute;
+  right: 20px;
+  top: 48px;
+}
+
+.subCont {
+  overflow: scroll;
+  height: 95%;
+}
+
+.hideScrollbar {
+  overflow-y: hidden
+}
+
+.dNone {
+  display: none !important;
+}
+
+@media (max-width: 1080px) {
+  .column {
+    flex-basis: 50%;
+    flex-basis: auto;
+  }
+
+  .columns-container {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .columns-container {
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .column {
+    height: 90%;
+  }
+
+}
+
+.overflow-toggle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: scale(1.5, 1);
+  color: brown;
+  cursor: pointer;
+}
+
+.rotated {
+  transform: scale(1.5, 1) rotate(-180deg);
+  transition: all 200ms;
+}
+
+.show-everything {
+  max-height: unset;
+
+  overflow: scroll;
+  flex-basis: 100%;
+  /* height: max-content; */
+  /* max-height: 90vh; */
+  padding-bottom: 20px;
+}

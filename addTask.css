@@ -1,0 +1,440 @@
+:root {
+  --our-color: #1e3190;
+}
+
+body {
+  margin: 0;
+  font-family: PT Sans;
+}
+
+.headline {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.secondSection span {
+  font-weight: bold;
+  color: var(--our-color);
+}
+
+.allContainers {
+  position: relative;
+  z-index: 5;
+  margin-top: 80px;
+  margin-right: 20px;
+  margin-left: 8px;
+}
+
+.firstSection span {
+  color: var(--our-color);
+}
+
+.secondSection {
+  background-color: #f4f3fb;
+  padding: 25px;
+  max-height: fit-content !important;
+  border-radius: 8px;
+}
+
+.secondSection span {
+  margin-bottom: 10px;
+}
+
+.dFlex {
+  display: flex;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleDiv {
+  width: 550px;
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.titleDiv input {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 500px;
+}
+
+.dueDateDiv {
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.dueDateDiv input {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 500px;
+}
+
+.form-select {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey !important;
+  width: 500px;
+}
+
+.categoryDiv {
+  width: 550px;
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.categoryDiv select {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 500px;
+}
+
+.urgencyDiv {
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.urgencyDiv select {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 500px;
+}
+
+.descriptionDiv {
+  width: 550px;
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.descriptionDiv textarea {
+  height: 200px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 500px;
+  text-align: start;
+  resize: none;
+}
+
+.actionsDiv {
+  margin-right: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.avatars {
+  margin: 15px;
+}
+
+.actionButtons {
+  margin-left: 290px;
+}
+
+.actionButtons button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: var(--our-color);
+}
+
+.cancelBtn button {
+  color: var(--our-color) !important;
+}
+
+.createBtn {
+  background-color: var(--our-color) !important;
+  color: white !important;
+  padding: 15px;
+  margin-left: 25px;
+  border-radius: 8px;
+}
+
+.avatarStyle {
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  margin-left: 4px;
+  margin-right: 4px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.avatarStyle:hover {
+  opacity: 1;
+}
+
+.avatarSelected {
+  border: solid 2px var(--our-color);
+  opacity: 1;
+}
+
+.disabled {
+  background-color: #737eb3 !important;
+}
+
+@media (max-width: 1500px) {
+  .titleDiv {
+    width: 450px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+  }
+
+  .titleDiv input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .dueDateDiv {
+    margin-right: 60px;
+    margin-bottom: 40px;
+  }
+
+  .dueDateDiv input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .form-select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey !important;
+    width: 400px;
+  }
+
+  .categoryDiv {
+    width: 450px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+  }
+
+  .categoryDiv select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .urgencyDiv {
+    margin-right: 60px;
+    margin-bottom: 40px;
+  }
+
+  .urgencyDiv select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .descriptionDiv {
+    width: 450px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+  }
+
+  .descriptionDiv textarea {
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px !important;
+    text-align: start;
+    resize: none;
+  }
+
+  .actionsDiv {
+    margin-right: 60px;
+    margin-bottom: 40px;
+  }
+
+  .actionButtons {
+    margin-left: 190px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .titleDiv {
+    width: 350px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .titleDiv input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 300px;
+  }
+
+  .dueDateDiv {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .dueDateDiv input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 300px;
+  }
+
+  .form-select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey !important;
+    width: 300px;
+  }
+
+  .categoryDiv {
+    width: 350px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .categoryDiv select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 300px;
+  }
+
+  .urgencyDiv {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .urgencyDiv select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 300px;
+  }
+
+  .descriptionDiv {
+    width: 350px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .descriptionDiv textarea {
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 300px !important;
+    text-align: start;
+    resize: none;
+  }
+
+  .actionsDiv {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .actionButtons {
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 970px) {
+  .dFlex {
+    display: block !important;
+  }
+
+  .firstRow {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .secondSection {
+    max-height: fit-content !important;
+  }
+
+  .titleDiv input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .dueDateDiv {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .dueDateDiv input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .secondRow {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .form-select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey !important;
+    width: 100px;
+  }
+
+  .categoryDiv select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .urgencyDiv select {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px;
+  }
+
+  .thirdRow {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .descriptionDiv {
+    width: 350px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .descriptionDiv textarea {
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    width: 400px !important;
+    text-align: start;
+    resize: none;
+  }
+
+  .actionsDiv {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .actionButtons {
+    margin-left: 185px;
+  }
+}
+
+@media (max-width: 970px) {}

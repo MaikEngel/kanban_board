@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="img/joinlogo.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join</title>
+  <link rel="stylesheet" href="board.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+  <script defer src="sidebar.js"></script>
+  <script src="mini_backend.js"></script>
+  <script type="text/javascript">
+    setURL(
+      "https://www.maik-engel.developerakademie.net/smallest_backend_ever"
+    );
+  </script>
+  <script defer src="addTask.js"></script>
+  <script defer src="board.js"></script>
+</head>
+
+<body onload="initBoard()" id="body" onmousewheel="scrollHorizontal(event)">
+  <main id="columns-container" class="small">
+    <div class="columns-container" id="columns-container">
+      <div id="to-do" class="column first" ondrop="dropTask('todo')" ondragover="allowDrop(event)">
+        <h2 class="fontColor">TO-DO</h2>
+        <div class="subCont" id="todos"></div>
+      </div>
+      <div id="doing" class="column second" ondrop="dropTask('inProgress')" ondragover="allowDrop(event)">
+        <h2 class="fontColor">IN PROGRESS</h2>
+        <div class="subCont" id="progress"></div>
+      </div>
+      <div id="testing" class="column third" ondrop="dropTask('testing')" ondragover="allowDrop(event)">
+        <h2 class="fontColor">TESTING</h2>
+        <div class="subCont" id="testings"></div>
+      </div>
+      <div id="done" class="column fourth" ondrop="dropTask('done')" ondragover="allowDrop(event)">
+        <h2 class="fontColor">DONE</h2>
+        <div class="subCont" id="dones"></div>
+      </div>
+    </div>
+
+    <div id="fullscreen" class="fullscreen dNone" onclick="closeFullscreen()">
+
+    </div>
+  </main>
+  <nav id="sidebar-cont"></nav>
+</body>
+
+</html>

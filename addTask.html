@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="img/joinlogo.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addTask</title>
+    <link rel="stylesheet" href="addTask.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script defer src="sidebar.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <script defer src="./addTask.js"></script>
+    <script src="./mini_backend.js"></script>
+    <script type="text/javascript">
+      setURL(
+        "https://www.maik-engel.developerakademie.net/smallest_backend_ever"
+      );
+    </script>
+  </head>
+
+  <body onload="init(); loadAvatars()">
+    <main class="small">
+      <div id="sidebar-cont"></div>
+      <div class="allContainers">
+        <div class="firstSection">
+          <h1>Add Task</h1>
+          <span>Learning Managment System Projekt</span>
+        </div>
+        <form onsubmit="addTask(event)">
+          <div class="secondSection">
+            <div class="firstRow dFlex">
+              <div class="titleDiv d-flex-col">
+                <span>TITLE</span>
+                <input
+                  id="title"
+                  type="text"
+                  placeholder="Type your title here"
+                  required
+                />
+              </div>
+              <div class="dueDateDiv d-flex-col">
+                <span>DUE DATE</span>
+                <input required id="date" type="date" />
+              </div>
+            </div>
+            <div class="secondRow dFlex">
+              <div class="categoryDiv d-flex-col">
+                <span>CATEGORY</span>
+                <select
+                  required
+                  class="form-select"
+                  id="category"
+                  aria-label="Default select example"
+                >
+                  <option value="HR">Human Resources</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Production">Production</option>
+                  <option value="Sales">Sales</option>
+                  <option value="Warehouse">Warehouse</option>
+                </select>
+              </div>
+              <div class="urgencyDiv d-flex-col">
+                <span>URGENCY</span>
+                <select
+                  required
+                  id="urgency"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="thirdRow dFlex">
+              <div class="descriptionDiv d-flex-col">
+                <span>DESCRIPTION</span>
+                <textarea
+                  required
+                  id="description"
+                  size="200"
+                  style="font-size: 12pt; height: 200px; width: 500px"
+                  placeholder="Add description..."
+                ></textarea>
+              </div>
+              <div class="actionsDiv">
+                <span
+                  >ASSIGNED TO
+                  <div class="">
+                    <div class="avatars" id="avatars" >avatar</div>
+                  </div>
+                </span>
+                <div class="actionButtons dFlex">
+                  <button id="cancel" class="cancelBtn">CANCEL</button>
+                  <button id="create" class="createBtn disabled" disabled>CREATE TASK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+  </body>
+</html>
